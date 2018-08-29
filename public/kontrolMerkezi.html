@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<style>
+    canvas {
+        border:1px solid #d3d3d3;
+        background-color: #f1f1f1;
+    }
+</style>
+</head>
+<body style="text-align: center" onload="startGame()">
+    <div class="container"> 
+        <hr>
+        <h1>Kontrol Merkezi</h1>
+        <button class="btn btn-success" id="yeniBtn">Yeni Drone</button> <hr>
+        <div id="dronIDButonlari">
+      
+        </div><hr>
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6">
+                <a id="msg"></a>
+                <form class="form row" action="">
+                    <input class="form-control" id="droneIdInput" type="text" style="text-align: center" placeholder="droneId giriniz"/>
+                    <input class="form-control" id="moveIdInput" type="text" style="text-align: center" placeholder="droneMoveHash giriniz"/>
+                    <button id="btnYolla" class="btn btn-danger">Yolla</button>
+                </form>             
+                <div>
+                    <button id="nw" class="btn mr-1 btn-primary" onclick="textboxinput2(this.id)">nw</button><button id="n" class="btn mr-1 btn-warning" onclick="textboxinput2(this.id)">n</button> <button id="ne"class="btn btn-primary" onclick="textboxinput2(this.id)">ne</button> <br>
+                    <button id="w"  class="btn btn-warning mr-5" onclick="textboxinput2(this.id)">w </button><button id="e" class="btn btn-warning" onclick="textboxinput2(this.id)">e</button> <br>
+                    <button id="sw" class="btn mr-1 btn-primary" onclick="textboxinput2(this.id)">sw</button><button id="s" class="btn  mr-1 btn-warning" onclick="textboxinput2(this.id)">s</button><button id="se" class="btn btn-primary" onclick="textboxinput2(this.id)">se</button> <br>
+                </div>
+            </div>
+            <div class="col-3"></div>
+        </div>
+        <div class="row" >
+            <div class="col-3"></div>
+            <div id="cizim" class="col-6" style="text-align: center" >
+                
+            </div>
+            <div class="col-3"></div>
+        </div>
+    </div>
+  
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/socket.io.js"></script>
+
+<script type='text/javascript' src="js/mainMerkez.js"></script>
+</body>
+</html>
